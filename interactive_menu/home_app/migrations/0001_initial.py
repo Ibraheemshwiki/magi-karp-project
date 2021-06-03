@@ -15,7 +15,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Cart',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
             ],
@@ -23,7 +24,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Category',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=45)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
@@ -32,7 +34,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Item',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=45)),
                 ('price', models.IntegerField()),
             ],
@@ -40,7 +43,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='User',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('first_name', models.CharField(max_length=45)),
                 ('last_name', models.CharField(max_length=45)),
                 ('email', models.CharField(max_length=45)),
@@ -52,23 +56,29 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Order',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('cart', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='order', to='home_app.Cart')),
-                ('users_who_like', models.ManyToManyField(related_name='liked_thoughts', to='home_app.User')),
+                ('id', models.AutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
+                ('cart', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+                 related_name='order', to='home_app.Cart')),
+                ('users_who_like', models.ManyToManyField(
+                    related_name='liked_thoughts', to='home_app.User')),
             ],
         ),
         migrations.CreateModel(
             name='Feedback',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
-                ('uploaded_by', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='feedback_uploaded', to='home_app.User')),
+                ('uploaded_by', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+                 related_name='feedback_uploaded', to='home_app.User')),
             ],
         ),
         migrations.AddField(
             model_name='cart',
             name='user',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='cart', to='home_app.User'),
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE, related_name='cart', to='home_app.User'),
         ),
     ]
