@@ -86,3 +86,7 @@ article{
     font-family: 'Andika New Basic';
     text-shadow: 2px 2px 8px rgb(184, 184, 62);
 }
+.image__description a{
+    color: white;
+    text-shadow: 2px 2px 8px rgb(241, 241, 18);
+}
