@@ -1,0 +1,127 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+
+/* 
+colors
+brown = #A76542
+grey...= #A9B3B4
+
+*/
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url("/static/images/body.jpg") ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: bottom;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.colorW{
+    color: #f8f9fa;
+}
+.hrcolor{
+    border-top: 1px solid #f8f9fa;
+}
+.logoandreg{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-start;
+    height: fit-content;
+}
+#signup1{
+    color:cornsilk;
+}
+#signin1{
+    color:cornsilk;
+    text-align:center;
+    padding-top: 9px;
+    margin-left: 12px;
+}
+.logo img{
+    width: 65px;
+    height: 65px;
+    margin-top: -39px;
+}
+.container_fluid {
+    min-width: 30%;
+    background: rgba(0,0,0,0.6);
+    padding-top: 0px;
+    margin-top: 30px;
+    border-radius: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    
+    
+}
+#dbemail{
+    display:none;
+}
+.effect8
+{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect8:before, .effect8:after
+{
+  content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect8:after
+{
+  right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+.container{background-color:none;
+    padding:30px 50px 20px 50px ; 
+    border-radius: 22px; 
+ }
+ .col_width{
+    flex: 0 0 7.666667%;
+    
+ }
+#title{font-family: inherit;
+color: aliceblue;
+margin-bottom: 45px;
+}
+.messages{
+    color:red;
+}

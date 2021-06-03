@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>Sign up facundo farm & resort</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<head>
+    {%load static%}
+    <link rel="stylesheet" href="{%  static  'css/logAreg.css'  %}">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="jquery/jquery.min.js"></script>
+    <!---- jquery link local dont forget to place this in first than other script or link or may not work ---->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!---- boostrap.min link local ----->
+
+    <link rel="stylesheet" href="css/style.css">
+    <!---- boostrap.min link local ----->
+
+    <script src="js/bootstrap.min.js"></script>
+    <!---- Boostrap js link local ----->
+
+    <link rel="icon" href="images/icon.png" type="image/x-icon" />
+    <!---- Icon link local ----->
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <!---- Font awesom link local ----->
+    <script>
+        $(document).ready(function () {
+            $("#signup1").click(function () {
+                $('#signup').css('display', 'block');
+
+                $('#signin').css('display', 'none');
+            });
+            $("#signin1").click(function () {
+                $('#signin').css('display', 'block');
+
+                $('#signup').css('display', 'none');
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container_fluid effect8">
+        <div class="container">
+            <div class="logo">
+                <img src="/static/images/logo-removebg-preview.png" alt="logo">
+                <h2 class="text-center " id="title">LEMON Palestine</h2>
+            </div>
+            <hr class='hrcolor'>
+            <div class="logoandreg">
+                <div id='signin' class="col-md-10" style='display:{{request.session.signin}};'>
+
+                    <form role="form" method="post" action="/login/">
+                        {% csrf_token %}
+
+                        <fieldset>
+                            {% if messages %}
+                            <ul class="messages">
+                                {% for message in messages %}
+
+                                <li class="{{ message.tags }}">{{ message }}</li>
+
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                            <p class=" colorW text-uppercase"> Login using your account: </p>
+
+                            <div class="form-group">
+                                <input type="email" name="email" id="email" class="form-control input-lg"
+                                    placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" id="password" class="form-control input-lg"
+                                    placeholder="Password" required>
+                            </div>
+                            <div>
+                                <input type="submit" class="btn btn-info" value="Sign In">
+
+                                <a href="#" role="button" id='signup1'>Sign up</a>
+
+                            </div>
+                            <br>
+                            <div style="overflow-y:hidden;">
+
+                            </div>
+
+                        </fieldset>
+                    </form>
+
+                </div>
+                <div class=" col-md-10" style='display:{{request.session.signup}};' id="signup">
+
+                    <form role="form" method="post" action="/register/">
+                        {% csrf_token %}
+                        <fieldset>
+                            {% if messages %}
+                            <ul class="messages">
+                                {% for message in messages %}
+                                {%if message != 'this email not registered'%}
+
+                                <li>{{ message }}</li>
+
+
+                                {% endif %}
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                            <p class="text-uppercase pull-center colorW"> SIGN UP.</p>
+                            <div class="form-group">
+                                <input type="text" name="first_name" id="first_name" class="form-control input-lg"
+                                    placeholder="first_name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="last_name" id="last_name" class="form-control input-lg"
+                                    placeholder="last_name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" name="email" id="email" class="form-control input-lg"
+                                    placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" id="password" class="form-control input-lg"
+                                    placeholder="Password" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password2" id="password2" class="form-control input-lg"
+                                    placeholder="Confirm Password" required>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label colorW">
+                                    <input type="checkbox" class="form-check-input " required>
+                                    By Clicking register you're agree to our policy & terms
+                                </label>
+                            </div>
+                            <div class='row'>
+                                <input type="submit" class="btn btn-success" value="Register">
+                                <a href='#' role="button" id='signin1'>Sign in</a>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+
+</html>
