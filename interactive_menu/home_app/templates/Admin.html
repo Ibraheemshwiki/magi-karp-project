@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% load static %}
+    <style>
+        .time {
+            display: inline-flex;
+        }
+        
+        body {
+            background-image: url("{% static 'backgrounds/b5.jpg' %}");
+        }
+        
+        fieldset {
+            color: white;
+        }
+        
+        .table {
+            display: flex;
+        }
+        
+        .feed {
+            border: 2px solid white;
+            color: white;
+            padding: 12px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Admin' Page</title>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-md">
+                <h2> <a class="navbar-brand" href="#">Admin's Page</a></h2>
+                <div class="time">
+                    <p>{{ date }}</p> |
+                    <p>{{ time }}</p>
+                </div>
+                <button type="submit" class="btn btn-dark">Logout</button>
+
+            </div>
+        </nav>
+
+
+        <div class="table">
+            <table class="table table-striped table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Date and Time</th>
+                        <th scope="col">User Name</th>
+                        <th scope="col">Table Number</th>
+                        <th scope="col">Ordered Items</th>
+                        <th scope="col">Actions</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for i in admin%}
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>{i.date and time}</td>
+                        <td>{i.user name}</td>
+                        <td>{i.table number}</td>
+                        <td>{i.ordered items}</td>
+                        <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+
+                    </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+
+            <div class="feed">
+                <h3>Feedback: </h3>
+
+                <ul>
+                    <li> {%for i in admin%} {{i.feedback}} {%endfor%}
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </div>
+</body>
+
+
+</html>
