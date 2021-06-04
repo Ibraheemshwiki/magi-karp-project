@@ -1,0 +1,240 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url("/static/images/homepage/home.jpg") ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: bottom;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+#navcolor{
+    
+    border: 2px solid silver;
+    background-color: #efefec99;
+    color: white;
+    width: 82%;
+    margin-left: 11rem;
+    margin-top: 4rem;
+}
+
+.acolor{
+    color: #000000;
+    
+
+    text-decoration: none;
+}
+#blackcolor{
+    background-color: #000000;
+    
+
+    text-decoration: none;
+}
+
+
+.navbar-header .logo{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    flex-direction: row;
+    
+}
+.navbar-header .logo p{
+    font-size: 26px;
+    margin-bottom: -9px;
+
+    font-weight: bolder;
+    margin-right: 43px;
+}
+#cart{
+    cursor: pointer;
+    width: 58px;
+    
+
+}
+
+.navbar-header img{
+    width: 58px;
+    height: 49px;
+}
+#navAedit{
+    padding: 19px;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.navbar-toggle{
+    color: black;
+    /* background-color: black; */
+}
+
+@media only screen and (min-width: 1210px) {
+    #container-fluid{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;}
+        
+        #navbar-nav{    display: flex;
+            -ms-flex-direction: column;
+            flex-direction: row;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+        }
+}
+
+        
+/* end of navbar */
+        
+#conter{
+    margin: 30px 20px 0px 20px;
+    display: flex;
+    min-height: 41rem;
+}
+.firstcol{
+    flex: 2;
+    margin:0px 10px 0px 10px;
+    background-color: #acaca9cc;
+    border-radius: 10px;
+}
+.secondcol{
+    flex: 5;
+    margin:0px 10px 0px 10px;
+    background-color: #acaca957;
+    border-radius: 10px;
+    padding: 5px;
+    overflow-y:auto;
+    float:left;
+    position:relative;
+    max-height: 41rem;
+            
+}
+.thirdcol{
+    flex: 0.5;
+    margin: 0px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #acaca957;
+    border-radius: 55px;
+    padding-top: 15px;
+ 
+}
+#border{
+    border: 2px solid black;
+    width: 100%;
+}
+.one{
+    width :30%;
+    height:10rem;
+    border: 2px solid red;
+    margin: 5px;
+    background-color: red;
+}
+.two{
+    width :30%;
+    height:10rem;
+    border: 2px solid red;
+    margin: 5px;
+    background-color: red;
+
+}
+.three{
+    width :30%;
+    height:10rem;
+    border: 2px solid red;
+    background-color: red;
+
+    margin: 5px;
+}
+
+.one1{
+    width :30%;
+    height:10rem;
+    border: 2px solid red;
+    margin: 5px;
+    background-color: green;
+}
+.two1{
+    width :30%;
+    height:10rem;
+    border: 2px solid red;
+    margin: 5px;
+    background-color: green;
+
+}
+.three1{
+    width :30%;
+    height:10rem;
+    border: 2px solid red;
+    background-color: green;
+
+    margin: 5px;
+}
+
+#myTab{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+
+}
+#myTab li {
+    width:100%;
+}
+#myTab li a{
+    color: black;
+}
+
+.contandiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.thirdcol img{
+    width: 7rem;
+}
+.thirdcol div p{
+    color: white;
+}
+.thirdcol div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+#CUS  {
+    background-color:#fab30b;
+    border-radius: 49px;
+
+}
+#FDB {
+    background-color:#fab30b;
+    border-radius: 49px;
+    padding: 6px 0px 7px 0px;
+
+}
+
+footer{
+    margin-top: 2rem;
+}
+#footer{
+    width: 100%;
+    height: 4.6rem;
+    display: flex;
+    background-color: #efefec99;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}

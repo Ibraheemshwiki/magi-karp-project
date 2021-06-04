@@ -11,6 +11,11 @@ def index(request):
     return render(request, 'loginAndreg.html')
 
 
+def home(request):
+
+    return render(request, 'home.html')
+
+
 def registration(request):
     if 'userEmail' in request.session:
 
