@@ -22,103 +22,106 @@
 
     <div class=" container ">
         <div class="recent-div">
-            <h2>Recent Dishes</h2>
+            <h5>Recent Dishes</h5>
         </div>
         <section class="customer-logos slider ">
             <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Breakfast/01.jpg' %}" alt="My image"></a>
+                <a href=""><img src="{% static 'images/thumbnails/Breakfast/01.jpg' %}" alt="My image"></a>
             </div>
             <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Breakfast/02.jpg' %}"></a>
+                <a href=""><img src="{% static 'images/thumbnails/Breakfast/02.jpg' %}"></a>
             </div>
             <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Breakfast/03.jpg' %}"></a>
+                <a href=""><img src="{% static 'images/thumbnails/Breakfast/03.jpg' %}"></a>
             </div>
             <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Desserts/08.jpg' %}"></a>
+                <a href=""><img src="{% static 'images/thumbnails/Desserts/08.jpg' %}"></a>
             </div>
             <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Desserts/09.jpg' %}"></a>
+                <a href=""><img src="{% static 'images/thumbnails/Desserts/09.jpg' %}"></a>
             </div>
             <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Desserts/10.jpg' %}"></a>
+                <a href=""><img src="{% static 'images/thumbnails/Desserts/10.jpg' %}"></a>
             </div>
             <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Drinks/25.jpg' %}"></a>
+                <a href=""><img src="{% static 'images/thumbnails/Drinks/25.jpg' %}"></a>
             </div>
             <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Drinks/26.jpg' %}"></a>
+                <a href=""><img src="{% static 'images/thumbnails/Drinks/26.jpg' %}"></a>
             </div>
             <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Drinks/27.jpg' %}"></a>
-            </div>
-        </section>
-
-    </div>
-
-    <div class=" container ">
-        <h2>Main Dishes Collection</h2>
-        <section class="customer-logos slider ">
-            <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Main_dishes/29.jpg' %}" alt="My image"></a>
-            </div>
-            <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Main_dishes/30.jpg' %}"></a>
-            </div>
-            <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Main_dishes/31.jpg' %}"></a>
-            </div>
-            <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Main_dishes/32.jpg' %}"></a>
-            </div>
-            <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Main_dishes/33.jpg' %}"></a>
-            </div>
-            <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Main_dishes/34.jpg' %}"></a>
-            </div>
-            <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Main_dishes/35.jpg' %}"></a>
-            </div>
-            <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Main_dishes/36.jpg' %}"></a>
-            </div>
-            <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Main_dishes/37.jpg' %}"></a>
+                <a href=""><img src="{% static 'images/thumbnails/Drinks/27.jpg' %}"></a>
             </div>
         </section>
 
     </div>
 
     <div class=" container ">
-        <h2>Most Ordered</h2>
+        <h5>Main Dishes Collection</h5>
+
+
+        <div class="carousel">
+            <input id="image1" type="radio" name="image-selector" checked="checked" />
+            <label for="image4">View image 4</label>
+            <img src="{% static 'images/maindishes/1.jpg' %}" />
+
+            <input id="image2" type="radio" name="image-selector" />
+            <label for="image1">View image 1</label>
+            <img src="{% static 'images/maindishes/2.jpg' %}" />
+
+            <input id="image3" type="radio" name="image-selector" />
+            <label for="image2">View image 2</label>
+            <img src="{% static 'images/maindishes/3.jpg' %}" />
+
+            <input id="image4" type="radio" name="image-selector" />
+            <label for="image3">View image 3</label>
+            <img src="{% static 'images/maindishes/4.jpg' %}" />
+
+            <input id="image4" type="radio" name="image-selector" />
+            <label for="image3">View image 3</label>
+            <img src="{% static 'images/maindishes/5.jpg' %}" />
+
+            <input id="image4" type="radio" name="image-selector" />
+            <label for="image3">View image 3</label>
+            <img src="{% static 'images/maindishes/6.jpg' %}" />
+
+            <label for="image4">View image 4</label>
+            <label for="image1">View image 1</label>
+        </div>
+
+
+
+    </div>
+
+    <div class=" container ">
+        <h5>Most Ordered</h5>
         <section class="customer-logos slider ">
             <div class="slide ">
-                <a href="/"><img src="{% static 'thumbnails/Breakfast/01.jpg' %}" alt="My image"></a>
+                <a href="/"><img src="{% static 'images/thumbnails/Salads/38.jpg' %}" alt="My image"></a>
             </div>
             <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Breakfast/02.jpg' %}"></a>
+                <a href=""><img src="{% static 'images/thumbnails/Salads/39.jpg' %}"></a>
             </div>
             <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Breakfast/03.jpg' %}"></a>
+                <a href=""><img src="{% static 'images/thumbnails/Salads/40.jpg' %}"></a>
             </div>
             <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Desserts/08.jpg' %}"></a>
+                <a href=""><img src="{% static 'images/thumbnails/Desserts/14.jpg' %}"></a>
             </div>
             <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Desserts/09.jpg' %}"></a>
+                <a href=""><img src="{% static 'images/thumbnails/Main dishes/30.jpg' %}"></a>
             </div>
             <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Desserts/10.jpg' %}"></a>
+                <a href=""><img src="{% static 'images/thumbnails/Main dishes/31.jpg' %}"></a>
             </div>
             <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Drinks/25.jpg' %}"></a>
+                <a href=""><img src="{% static 'images/thumbnails/Main dishes/33.jpg' %}"></a>
             </div>
             <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Drinks/26.jpg' %}"></a>
+                <a href=""><img src="{% static 'images/thumbnails/Main dishes/35.jpg' %}"></a>
             </div>
             <div class="slide ">
-                <a href=""><img src="{% static 'thumbnails/Drinks/27.jpg' %}"></a>
+                <a href=""><img src="{% static 'images/thumbnails/Main dishes/37.jpg' %}"></a>
             </div>
         </section>
 
