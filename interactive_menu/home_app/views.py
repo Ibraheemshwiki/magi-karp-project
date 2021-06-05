@@ -11,11 +11,7 @@ def index(request):
     if 'signin' not in request.session and 'signup' not in request.session:
         request.session['signin'] = 'block'
         request.session['signup'] = 'none'
-<<<<<<< HEAD
-    return render(request, 'home.html')
-=======
     return render(request, 'loginAndreg.html')
->>>>>>> ed0b12b7fd85dcd871ff61798f36657aa2b0ae82
 
 
 def details(request):
@@ -60,10 +56,6 @@ def log_in(request):
             return redirect('/login/')
         elif len(errors) == 0:
             request.session['userEmail'] = request.POST['email']
-<<<<<<< HEAD
-        return redirect('/')
-
-=======
             return redirect('/welcome/')
 
 def admin(request):
@@ -71,4 +63,3 @@ def admin(request):
         "date": strftime("%d %b, %y", gmtime()),
         "time": time.strftime("%H:%M  %p", time.localtime())}
     return render(request, 'admin.html', context)
->>>>>>> ed0b12b7fd85dcd871ff61798f36657aa2b0ae82

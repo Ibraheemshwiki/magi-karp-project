@@ -6,8 +6,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta charset="utf-8">
-    {%load static%}
+    <meta charset="utf-8"> {%load static%}
     <link rel="stylesheet" href="{%  static  'css/logAreg.css'  %}">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -30,13 +29,13 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <!---- Font awesom link local ----->
     <script>
-        $(document).ready(function () {
-            $("#signup1").click(function () {
+        $(document).ready(function() {
+            $("#signup1").click(function() {
                 $('#signup').css('display', 'block');
 
                 $('#signin').css('display', 'none');
             });
-            $("#signin1").click(function () {
+            $("#signin1").click(function() {
                 $('#signin').css('display', 'block');
 
                 $('#signup').css('display', 'none');
@@ -73,12 +72,10 @@
                             <p class=" colorW text-uppercase"> Login using your account: </p>
 
                             <div class="form-group">
-                                <input type="email" name="email" id="email" class="form-control input-lg"
-                                    placeholder="Email Address" required>
+                                <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" required>
                             </div>
                             <div class="form-group">
-                                <input type="password" name="password" id="password" class="form-control input-lg"
-                                    placeholder="Password" required>
+                                <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" required>
                             </div>
                             <div>
                                 <input type="submit" class="btn btn-info" value="Sign In">
@@ -102,37 +99,30 @@
                         <fieldset>
                             {% if messages %}
                             <ul class="messages">
-                                {% for message in messages %}
-                                {%if message != 'this email not registered'%}
+                                {% for message in messages %} {%if message != 'this email not registered'%}
 
                                 <li>{{ message }}</li>
 
 
-                                {% endif %}
-                                {% endfor %}
+                                {% endif %} {% endfor %}
                             </ul>
                             {% endif %}
                             <p class="text-uppercase pull-center colorW"> SIGN UP.</p>
                             <div class="form-group">
-                                <input type="text" name="first_name" id="first_name" class="form-control input-lg"
-                                    placeholder="first_name" required>
+                                <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="first_name" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="last_name" id="last_name" class="form-control input-lg"
-                                    placeholder="last_name" required>
+                                <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="last_name" required>
                             </div>
 
                             <div class="form-group">
-                                <input type="email" name="email" id="email" class="form-control input-lg"
-                                    placeholder="Email Address" required>
+                                <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" required>
                             </div>
                             <div class="form-group">
-                                <input type="password" name="password" id="password" class="form-control input-lg"
-                                    placeholder="Password" required>
+                                <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" required>
                             </div>
                             <div class="form-group">
-                                <input type="password" name="password2" id="password2" class="form-control input-lg"
-                                    placeholder="Confirm Password" required>
+                                <input type="password" name="password2" id="password2" class="form-control input-lg" placeholder="Confirm Password" required>
                             </div>
                             <div class="form-check">
                                 <label class="form-check-label colorW">
