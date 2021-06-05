@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {%load static%}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> {%load static%}
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,8 +25,7 @@
     <nav class=" navbar" id='navcolor'>
         <div class="container-fluid" id='container-fluid'>
             <div class="navbar-header">
-                <button type="button" id="navbar-toggle" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#myNavbar">
+                <button type="button" id="navbar-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar " id="blackcolor"></span>
                     <span class="icon-bar " id="blackcolor"></span>
                     <span class="icon-bar " id="blackcolor"></span>
@@ -56,8 +54,7 @@
                     <li><a href="#" class="acolor" id='navAedit'><span
                                 class="glyphicon glyphicon-user   acolor"></span>Logout
                         </a></li>
-                    <li><img id="cart" onclick="location.href='/';" src="/static/images/homepage/cart.png"
-                            alt="cart icon">
+                    <li><img id="cart" onclick="location.href='/';" src="/static/images/homepage/cart.png" alt="cart icon">
                     </li>
                 </ul>
             </div>
@@ -75,20 +72,22 @@
         <div class='firstcol'>
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                        aria-controls="home" aria-selected="true">Home</a>
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="/breakfast" role="tab" aria-controls="home" aria-selected="true">Breakfast</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                        aria-controls="profile" aria-selected="false">Profile</a>
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="/maindishes" role="tab" aria-controls="profile" aria-selected="false">Main Dishes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab"
-                        aria-controls="messages" aria-selected="false">Messages</a>
+                    <a class="nav-link" id="messages-tab" data-toggle="tab" href="/desserts" role="tab" aria-controls="messages" aria-selected="false">Desserts</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab"
-                        aria-controls="settings" aria-selected="false">Settings</a>
+                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="/drinks" role="tab" aria-controls="settings" aria-selected="false">Drinks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="/salads" role="tab" aria-controls="settings" aria-selected="false">Salads</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="/sheesha" role="tab" aria-controls="settings" aria-selected="false">Sheesha Corner</a>
                 </li>
             </ul>
 
@@ -177,14 +176,13 @@
 
 
         <script>
-            $('#myTab a').on('click', function (event) {
+            $('#myTab a').on('click', function(event) {
                 event.preventDefault()
                 $('#myTab a').css('background-color', 'transparent')
                 $(this).css('background-color', '#fddc17')
 
 
             })
-
         </script>
 
     </section>

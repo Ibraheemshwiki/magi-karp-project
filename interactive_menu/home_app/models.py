@@ -60,6 +60,7 @@ class Cart(models.Model):
 
 class Item(models.Model):
     name = models.CharField(max_length=45)
+    category = models.ForeignKey(Category, related_name = 'items')
     price = models.IntegerField()
 
 
