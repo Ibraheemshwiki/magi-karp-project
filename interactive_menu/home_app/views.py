@@ -22,8 +22,11 @@ def home(request):
 
     return render(request, 'homeTemp.html')
 
-def chart (request):
-    return render (request, 'chart.html')    
+def cart (request):
+    return render (request, 'cart.html')   
+
+def contact (request):
+    return render (request, 'contact.html')
 
 
 
