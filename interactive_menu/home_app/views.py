@@ -58,6 +58,19 @@ def log_in(request):
             request.session['userEmail'] = request.POST['email']
             return redirect('/welcome/')
 
+
+def welcome(request):
+    return render(request,'slide_page.html')
+
+
+
+
+
+
+
+
+
+
 def admin(request):
     context = {
         "date": strftime("%d %b, %y", gmtime()),
