@@ -23,10 +23,14 @@ def details(request):
 
 def home(request):
     context = {
-        'breakfast' : getcategory('breakfast')
-
+        'breakfast' : getcategory('breakfast'),
+        'drinks' : getcategory('drinks'),
+        'maindishes' : getcategory('maindishes'),
+        'desserts' : getcategory('desserts'),
+        'sheesha' : getcategory('sheesha'),
+        'salads' : getcategory('salads'),
+        'allitem' : getallitem(),
     }
-
     return render(request, 'homeTemp.html',context)
 
 def cart (request):
@@ -39,7 +43,6 @@ def contact (request):
 
 def registration(request):
     if 'userEmail' in request.session:
-
         return redirect('/welcome/')
     if request.method == 'POST':
         request.session['signup'] = 'block'
@@ -49,11 +52,11 @@ def registration(request):
         if len(errors) > 0:
             for key, value in errors.items():
                 messages.error(request, value)
-            return redirect('/login/')
+            return redirect('/login')
         elif len(errors) == 0:
             request.session['userEmail'] = request.POST['email']
-            return redirect('/welcome/')
-    return redirect('/welcome/')
+            return redirect('/welcome')
+    return redirect('/welcome')
 
 
 def log_in(request):
@@ -70,13 +73,18 @@ def log_in(request):
         elif len(errors) == 0:
             request.session['userEmail'] = request.POST['email']
             return redirect('/welcome/')
+    return redirect('/loginandreg/')
 
 
 def welcome(request):
     
     return render(request,'slide_page.html')
 
-
+def logout(request):
+    if 'userEmail' in request.session:
+        request.session.clear()
+        return redirect('/loginandreg/')
+    
 
 
 

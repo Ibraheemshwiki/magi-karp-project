@@ -53,19 +53,20 @@ class Category(models.Model):
 
 class Cart(models.Model):
     user = models.ForeignKey(User, related_name="cart",
-                             on_delete=models.CASCADE)
+                            on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
 
 class Item(models.Model):
     name = models.CharField(max_length=45)
+    category = models.ForeignKey(Category, related_name = 'items', on_delete = models.CASCADE,null=True)
     price = models.IntegerField()
 
 
 class Order(models.Model):
     cart = models.ForeignKey(Cart, related_name="order",
-                             on_delete=models.CASCADE)
+                            on_delete=models.CASCADE)
     users_who_like = models.ManyToManyField(
         User, related_name="liked_thoughts")
 
@@ -82,7 +83,7 @@ def create_user(data):
     if len(errors) == 0:
 
         pw = bcrypt.hashpw(data["password"].encode(),
-                           bcrypt.gensalt()).decode()
+                        bcrypt.gensalt()).decode()
         User.objects.create(first_name=data['first_name'], last_name=data['last_name'],
                             email=data['email'], password=pw,)
 
@@ -105,3 +106,6 @@ def check_email(postData):
 
 def getcategory(catname):
     return Item.objects.filter(category=Category.objects.get(name=catname))
+
+def getallitem():
+    return Item.objects.all()

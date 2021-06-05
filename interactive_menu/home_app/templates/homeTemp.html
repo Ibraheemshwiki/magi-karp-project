@@ -1,10 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {%load static%}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> {%load static%}
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,16 +12,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-
     <title>LEMON</title>
 </head>
 
-
 <body>
-
-
-
     <nav class=" navbar" id='navcolor'>
         <div class="container-fluid" id='container-fluid'>
             <div class="navbar-header">
@@ -36,31 +29,27 @@
                     <img src="/static/images/homepage/logo-removebg-preview.png" alt="logo">
                     <p class="navbar-brand acolor">LEMON Restaurant</p>
                 </div>
-                
-            </div><div class='space'>
-                    
-                </div>
+
+            </div>
+            <div class='space'>
+
+            </div>
             <div class="navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav" id="navbar-nav">
-                    <li class="active"><a href="#" class="acolor" id='navAedit'>Home</a></li>
-                    
-                <ul class="nav navbar-nav navbar-right" id="navbar-nav">
-                    <li><a href="/loginandreg/" class="acolor" id='navAedit'><span
-                                class="glyphicon glyphicon-user   acolor"></span>Logout
-                        </a></li>
-                    <li><img id="cart" onclick="location.href='/cart/';" src="/static/images/homepage/cart.png"
-                            alt="cart icon">
-                    </li>
+                    <li class="active"><a href="/welcome" class="acolor" id='navAedit'>Home</a></li>
+
+                    <ul class="nav navbar-nav navbar-right" id="navbar-nav">
+                        <li><a href="/logout" class="acolor" id='navAedit'><span
+                                    class="glyphicon glyphicon-user   acolor"></span>Logout
+                            </a></li>
+                        <li><img id="cart" onclick="location.href='/cart/';" src="/static/images/homepage/cart.png"
+                                alt="cart icon">
+                        </li>
+                    </ul>
                 </ul>
             </div>
         </div>
     </nav>
-
-</body>
-<!-- END of navbar -->
-
-
-<body>
 
 
     <section id="conter">
@@ -94,88 +83,107 @@
                     <a class="nav-link" id="settings-tab" data-toggle="tab" href="#Shisha" role="tab"
                         aria-controls="settings" aria-selected="false">Shisha</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#fries" role="tab"
-                        aria-controls="settings" aria-selected="false">Fries and Nachos</a>
-                </li>
             </ul>
-
-
         </div>
         <div class='secondcol'>
             <div class="tab-content" id="tab-content">
                 <div class="tab-pane active" id="all" role="tabpanel" aria-labelledby="home-tab">
                     <div class="contandiv">
-                    </div>
-                </div>
-                <div class="tab-pane" id="breakfast" role="tabpanel" aria-labelledby="profile-tab">
-                    <div class="contandiv">
-                        
-                        {%for item in breakfast%}
-                        <div class="item"><img src="static/images/thumbnails/Breakfast/{{item.name}}.jpg">
-                            <p>{{item.name}} Price : {{item.price}}</p>
+                        {%for item in allitem%}
+                        <div class="item"><img src="static/images/thumbnails/{{item.category.name}}/{{item.name}}.jpg">
+                            <div class="pricename">
+                                <p>{{item.name}} </p>
+                                <p>Price : {{item.price}}</p>
+                            </div>
                         </div>
                         {%endfor%}
-                        
                     </div>
                 </div>
-                <div class="tab-pane" id="main" role="tabpanel" aria-labelledby="messages-tab">
-                    <div class="contandiv">
+            <div class="tab-pane" id="breakfast" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="contandiv">
 
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
+                    {%for item in breakfast%}
+                    <div class="item"><img src="static/images/thumbnails/Breakfast/{{item.name}}.jpg">
+                        <div class="pricename">
+                            <p>{{item.name}} </p>
+                            <p>Price : {{item.price}}</p>
+                        </div>
                     </div>
+                    {%endfor%}
+
                 </div>
-                <div class="tab-pane" id="salads" role="tabpanel" aria-labelledby="settings-tab">...</div>
-                <div class="tab-pane" id="drinks" role="tabpanel" aria-labelledby="profile-tab">
-                    <div class="contandiv">
-                        
-                        {%for item in breakfast%}
-                        <div class="item"><img src="static/images/thumbnails/Breakfast/{{item.name}}.jpg">
-                            <p>{{item.name}} Price : {{item.price}}</p>
-                        </div>
-                        {%endfor%}
-                        
-                    </div>
-                <div class="tab-pane" id="desserts" role="tabpanel" aria-labelledby="profile-tab">
-                    <div class="contandiv">
-                        
-                        {%for item in breakfast%}
-                        <div class="item"><img src="static/images/thumbnails/Breakfast/{{item.name}}.jpg">
-                            <p>{{item.name}} Price : {{item.price}}</p>
-                        </div>
-                        {%endfor%}
-                        
-                    </div>
-                <div class="tab-pane" id="Shisha" role="tabpanel" aria-labelledby="profile-tab">
-                    <div class="contandiv">
-                        
-                        {%for item in breakfast%}
-                        <div class="item"><img src="static/images/thumbnails/Breakfast/{{item.name}}.jpg">
-                            <p>{{item.name}} Price : {{item.price}}</p>
-                        </div>
-                        {%endfor%}
-                        
-                    </div>
-                <div class="tab-pane" id="fries" role="tabpanel" aria-labelledby="profile-tab">
-                    <div class="contandiv">
-                        
-                        {%for item in breakfast%}
-                        <div class="item"><img src="static/images/thumbnails/Breakfast/{{item.name}}.jpg">
-                            <p>{{item.name}} Price : {{item.price}}</p>
-                        </div>
-                        {%endfor%}
-                        
-                    </div>
             </div>
-
+            <div class="tab-pane" id="main" role="tabpanel" aria-labelledby="messages-tab">
+                <div class="contandiv">
+                    {%for item in maindishes%}
+                    <div class="item"><img src="static/images/thumbnails/Maindishes/{{item.name}}.jpg">
+                        <div class="pricename">
+                            <p>{{item.name}} </p>
+                            <p>Price : {{item.price}}</p>
+                        </div>
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+            <div class="tab-pane" id="salads" role="tabpanel" aria-labelledby="settings-tab">
+                <div class="contandiv">
+                {%for item in salads%}
+                <div class="item"><img src="static/images/thumbnails/Salads/{{item.name}}.jpg">
+                    <div class="pricename">
+                        <p>{{item.name}} </p>
+                        <p>Price : {{item.price}}</p>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
         </div>
+            <div class="tab-pane" id="drinks" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="contandiv">
+
+                    {%for item in drinks%}
+                    <div class="item"><img src="static/images/thumbnails/Drinks/{{item.name}}.jpg">
+                        <div class="pricename">
+                            <p>{{item.name}} </p>
+                            <p>Price : {{item.price}}</p>
+                        </div>
+                    </div>
+                    {%endfor%}
+
+                </div>
+            </div>
+            <div class="tab-pane" id="desserts" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="contandiv">
+
+                    {%for item in desserts%}
+                    <div class="item"><img src="static/images/thumbnails/Desserts/{{item.name}}.jpg">
+                        <div class="pricename">
+                            <p>{{item.name}} </p>
+                            <p>Price : {{item.price}}</p>
+                        </div>
+                    </div>
+                    {%endfor%}
+
+                </div>
+            </div>
+            <div class="tab-pane" id="Shisha" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="contandiv">
+
+                    {%for item in sheesha%}
+                    <div class="item"><img src="static/images/thumbnails/Sheesha/{{item.name}}.jpg">
+                        <div class="pricename">
+                            <p>{{item.name}} </p>
+                            <p>Price : {{item.price}}</p>
+                        </div>
+                    </div>
+                    {%endfor%}
+                </div>
+                </div>
+            </div>
+        </div>
+
+
         <div class='thirdcol'>
-            <!-- <div onclick="location.href='/';">
-                <img id="FDB" src="/static/images/homepage/FeedBack.png" alt="FeedBack icon">
-                <p>FeedBack</p>
-            </div> -->
+
             <div onclick="location.href='/cart/';">
                 <img src="/static/images/homepage/cart.png" alt="cart icon">
                 <p>My cart</p>
@@ -199,21 +207,16 @@
 
 
             })
-
         </script>
 
     </section>
-
-
-
-
-
 
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 <footer>
     <div id="footer">
@@ -222,3 +225,5 @@
     </div>
 
 </footer>
+
+</html>
