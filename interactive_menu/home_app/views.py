@@ -1,4 +1,3 @@
-
 from django.shortcuts import render, redirect
 from .models import *
 from django.contrib import messages
@@ -10,8 +9,7 @@ def index(request):
     if 'signin' not in request.session and 'signup' not in request.session:
         request.session['signin'] = 'block'
         request.session['signup'] = 'none'
-
-# Create your views here.
+    return render(request, 'home.html')
 
 
 def details(request):
@@ -62,5 +60,5 @@ def log_in(request):
             return redirect('/')
         elif len(errors) == 0:
             request.session['userEmail'] = request.POST['email']
-            return redirect('/')
+        return redirect('/')
 
