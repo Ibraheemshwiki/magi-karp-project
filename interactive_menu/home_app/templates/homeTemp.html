@@ -67,35 +67,35 @@
         <div class='firstcol'>
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#all" role="tab"
                         aria-controls="home" aria-selected="true">All Items</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#breakfast" role="tab"
                         aria-controls="profile" aria-selected="false">Breakfast</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab"
+                    <a class="nav-link" id="messages-tab" data-toggle="tab" href="#main" role="tab"
                         aria-controls="messages" aria-selected="false">Main Dishes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab"
+                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#salads" role="tab"
                         aria-controls="settings" aria-selected="false">Salads</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab"
+                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#drinks" role="tab"
                         aria-controls="settings" aria-selected="false">Drinks</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab"
+                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#desserts" role="tab"
                         aria-controls="settings" aria-selected="false">Desserts</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab"
-                        aria-controls="settings" aria-selected="false">Salads</a>
+                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#Shisha" role="tab"
+                        aria-controls="settings" aria-selected="false">Shisha</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab"
+                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#fries" role="tab"
                         aria-controls="settings" aria-selected="false">Fries and Nachos</a>
                 </li>
             </ul>
@@ -104,55 +104,22 @@
         </div>
         <div class='secondcol'>
             <div class="tab-content" id="tab-content">
-                <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-pane active" id="all" role="tabpanel" aria-labelledby="home-tab">
                     <div class="contandiv">
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
                     </div>
                 </div>
-                <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="tab-pane" id="breakfast" role="tabpanel" aria-labelledby="profile-tab">
                     <div class="contandiv">
-
-                        <div class="one1"></div>
-                        <div class="two1"></div>
-                        <div class="three1"></div>
+                        
+                        {%for item in breakfast%}
+                        <div class="item"><img src="static/images/thumbnails/Breakfast/{{item.name}}.jpg">
+                            <p>{{item.name}} Price : {{item.price}}</p>
+                        </div>
+                        {%endfor%}
+                        
                     </div>
                 </div>
-                <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+                <div class="tab-pane" id="main" role="tabpanel" aria-labelledby="messages-tab">
                     <div class="contandiv">
 
                         <div class="one"></div>
@@ -160,7 +127,47 @@
                         <div class="three"></div>
                     </div>
                 </div>
-                <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">...</div>
+                <div class="tab-pane" id="salads" role="tabpanel" aria-labelledby="settings-tab">...</div>
+                <div class="tab-pane" id="drinks" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="contandiv">
+                        
+                        {%for item in breakfast%}
+                        <div class="item"><img src="static/images/thumbnails/Breakfast/{{item.name}}.jpg">
+                            <p>{{item.name}} Price : {{item.price}}</p>
+                        </div>
+                        {%endfor%}
+                        
+                    </div>
+                <div class="tab-pane" id="desserts" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="contandiv">
+                        
+                        {%for item in breakfast%}
+                        <div class="item"><img src="static/images/thumbnails/Breakfast/{{item.name}}.jpg">
+                            <p>{{item.name}} Price : {{item.price}}</p>
+                        </div>
+                        {%endfor%}
+                        
+                    </div>
+                <div class="tab-pane" id="Shisha" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="contandiv">
+                        
+                        {%for item in breakfast%}
+                        <div class="item"><img src="static/images/thumbnails/Breakfast/{{item.name}}.jpg">
+                            <p>{{item.name}} Price : {{item.price}}</p>
+                        </div>
+                        {%endfor%}
+                        
+                    </div>
+                <div class="tab-pane" id="fries" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="contandiv">
+                        
+                        {%for item in breakfast%}
+                        <div class="item"><img src="static/images/thumbnails/Breakfast/{{item.name}}.jpg">
+                            <p>{{item.name}} Price : {{item.price}}</p>
+                        </div>
+                        {%endfor%}
+                        
+                    </div>
             </div>
 
         </div>

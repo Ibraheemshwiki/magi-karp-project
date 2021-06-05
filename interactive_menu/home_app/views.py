@@ -20,9 +20,14 @@ def details(request):
     return render(request, 'details.html')
 
 
-def home(request):
 
-    return render(request, 'homeTemp.html')
+def home(request):
+    context = {
+        'breakfast' : getcategory('breakfast')
+
+    }
+
+    return render(request, 'homeTemp.html',context)
 
 def cart (request):
     return render (request, 'cart.html')   

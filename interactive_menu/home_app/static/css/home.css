@@ -241,3 +241,17 @@ footer{
     justify-content: center;
     
 }
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    width: 30%;
+    height: 20rem;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+}

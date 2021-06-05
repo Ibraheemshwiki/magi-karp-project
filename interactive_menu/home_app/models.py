@@ -102,3 +102,6 @@ def check_email(postData):
             return errors
     errors['login'] = "user name or password not valide"
     return errors
+
+def getcategory(catname):
+    return Item.objects.filter(category=Category.objects.get(name=catname))
