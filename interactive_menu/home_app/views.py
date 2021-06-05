@@ -14,11 +14,24 @@ def index(request):
 def details(request):
     return render(request, 'details.html')
 
-def admin (request):
+# Create your views here.
+
+
+def details(request):
+    return render(request, 'details.html')
+
+
+def home(request):
+
+    return render(request, 'homeTemp.html')
+
+
+def admin(request):
     context = {
-            "date": strftime("%d %b, %y", gmtime()),
-            "time": time.strftime("%H:%M  %p", time.localtime())}
-    return render (request, 'admin.html', context)
+        "date": strftime("%d %b, %y", gmtime()),
+        "time": time.strftime("%H:%M  %p", time.localtime())}
+    return render(request, 'admin.html', context)
+
 
 def registration(request):
     if 'userEmail' in request.session:

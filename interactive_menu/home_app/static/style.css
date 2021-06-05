@@ -1,0 +1,34 @@
+        body {
+            background-image: url("{% static 'backgrounds/background1.jpg' %}");
+        }
+        
+        .container {
+            margin: 10px;
+            text-align: center;
+            color: white;
+        }
+        
+        .img-fluid {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            border-radius: 5px;
+        }
+        
+        #counter {
+            width: 87px;
+            transform: translateY(10px);
+            margin-left: 6px;
+        }
+        
+        .tag {
+            display: inline-block;
+            width: 89px;
+            height: 30px;
+            background-color: #983418;
+            -webkit-border-radius: 3px 4px 4px 3px;
+            -moz-border-radius: 3px 4px 4px 3px;
+            border-radius: 3px 4px 4px 3px;
+            border-left: 1px solid #983418;
+        }
