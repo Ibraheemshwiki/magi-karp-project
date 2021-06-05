@@ -63,3 +63,4 @@ def log_in(request):
         elif len(errors) == 0:
             request.session['userEmail'] = request.POST['email']
             return redirect('/')
+

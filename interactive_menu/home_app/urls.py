@@ -9,5 +9,4 @@ urlpatterns = [
     path('login/', views.log_in),
     path('home/', views.home),
 
-
 ]
