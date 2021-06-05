@@ -47,6 +47,10 @@ body {
     width: 58px;
 }
 
+.space {
+    flex: 3;
+}
+
 .navbar-header img {
     width: 58px;
     height: 49px;

@@ -8,6 +8,8 @@ def main(request):
     return render(request,'home.html')
 
 def index(request):
+    if 'userEmail' in request.session:
+        return redirect('/welcome/')
     if 'signin' not in request.session and 'signup' not in request.session:
         request.session['signin'] = 'block'
         request.session['signup'] = 'none'
@@ -25,6 +27,12 @@ def home(request):
     }
 
     return render(request, 'homeTemp.html',context)
+
+def cart (request):
+    return render (request, 'cart.html')   
+
+def contact (request):
+    return render (request, 'contact.html')
 
 
 
@@ -64,6 +72,7 @@ def log_in(request):
 
 
 def welcome(request):
+    
     return render(request,'slide_page.html')
 
 

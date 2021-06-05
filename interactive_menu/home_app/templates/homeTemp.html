@@ -12,16 +12,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-
     <title>LEMON</title>
 </head>
 
-
 <body>
-
-
-
     <nav class=" navbar" id='navcolor'>
         <div class="container-fluid" id='container-fluid'>
             <div class="navbar-header">
@@ -34,40 +28,29 @@
                     <img src="/static/images/homepage/logo-removebg-preview.png" alt="logo">
                     <p class="navbar-brand acolor">LEMON Restaurant</p>
                 </div>
+
+            </div>
+            <div class='space'>
+
             </div>
             <div class="navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav" id="navbar-nav">
                     <li class="active"><a href="#" class="acolor" id='navAedit'>Home</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle acolor" data-toggle="dropdown" href="#" id='navAedit'>Page 1 <span
-                                class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#" class="acolor">Page 1-1</a></li>
-                            <li><a href="#" class="acolor">Page 1-2</a></li>
-                            <li><a href="#" class="acolor">Page 1-3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" class="acolor" id='navAedit'>Page 2</a></li>
-                    <li><a href="#" class="acolor" id='navAedit'>Page 3</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right" id="navbar-nav">
-                    <li><a href="#" class="acolor" id='navAedit'><span
-                                class="glyphicon glyphicon-user   acolor"></span>Logout
-                        </a></li>
-                    <li><img id="cart" onclick="location.href='/';" src="/static/images/homepage/cart.png" alt="cart icon">
-                    </li>
+
+                    <ul class="nav navbar-nav navbar-right" id="navbar-nav">
+                        <li><a href="/loginandreg/" class="acolor" id='navAedit'><span
+                                    class="glyphicon glyphicon-user   acolor"></span>Logout
+                            </a></li>
+                        <li><img id="cart" onclick="location.href='/cart/';" src="/static/images/homepage/cart.png" alt="cart icon">
+                        </li>
+                    </ul>
                 </ul>
             </div>
         </div>
     </nav>
-
 </body>
-<!-- END of navbar -->
-
 
 <body>
-
-
     <section id="conter">
         <div class='firstcol'>
             <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -90,8 +73,6 @@
                     <a class="nav-link" id="settings-tab" data-toggle="tab" href="/sheesha" role="tab" aria-controls="settings" aria-selected="false">Sheesha Corner</a>
                 </li>
             </ul>
-
-
         </div>
         <div class='secondcol'>
             <div class="tab-content" id="tab-content">
@@ -125,19 +106,19 @@
 
         </div>
         <div class='thirdcol'>
-            <div onclick="location.href='/';">
+            <!-- <div onclick="location.href='/';">
                 <img id="FDB" src="/static/images/homepage/FeedBack.png" alt="FeedBack icon">
                 <p>FeedBack</p>
-            </div>
-            <div onclick="location.href='/';">
+            </div> -->
+            <div onclick="location.href='/cart/';">
                 <img src="/static/images/homepage/cart.png" alt="cart icon">
                 <p>My cart</p>
             </div>
-            <div onclick="location.href='/';">
+            <div onclick="location.href='/cart/';">
                 <img src="/static/images/homepage/buy.png" alt="order icon">
                 <p>Order Now</p>
             </div>
-            <div onclick="location.href='/';">
+            <div onclick="location.href='/contact/';">
                 <img id="CUS" src="/static/images/homepage/contactUs.png" alt="contact Us icon">
                 <p>Contact Us</p>
             </div>
