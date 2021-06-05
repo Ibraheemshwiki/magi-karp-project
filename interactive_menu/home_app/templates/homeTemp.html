@@ -36,27 +36,19 @@
                     <img src="/static/images/homepage/logo-removebg-preview.png" alt="logo">
                     <p class="navbar-brand acolor">LEMON Restaurant</p>
                 </div>
-            </div>
+                
+            </div><div class='space'>
+                    
+                </div>
             <div class="navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav" id="navbar-nav">
                     <li class="active"><a href="#" class="acolor" id='navAedit'>Home</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle acolor" data-toggle="dropdown" href="#" id='navAedit'>Page 1 <span
-                                class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#" class="acolor">Page 1-1</a></li>
-                            <li><a href="#" class="acolor">Page 1-2</a></li>
-                            <li><a href="#" class="acolor">Page 1-3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" class="acolor" id='navAedit'>Page 2</a></li>
-                    <li><a href="#" class="acolor" id='navAedit'>Page 3</a></li>
-                </ul>
+                    
                 <ul class="nav navbar-nav navbar-right" id="navbar-nav">
-                    <li><a href="#" class="acolor" id='navAedit'><span
+                    <li><a href="/loginandreg/" class="acolor" id='navAedit'><span
                                 class="glyphicon glyphicon-user   acolor"></span>Logout
                         </a></li>
-                    <li><img id="cart" onclick="location.href='/';" src="/static/images/homepage/cart.png"
+                    <li><img id="cart" onclick="location.href='/cart/';" src="/static/images/homepage/cart.png"
                             alt="cart icon">
                     </li>
                 </ul>
@@ -76,19 +68,35 @@
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                        aria-controls="home" aria-selected="true">Home</a>
+                        aria-controls="home" aria-selected="true">All Items</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                        aria-controls="profile" aria-selected="false">Profile</a>
+                        aria-controls="profile" aria-selected="false">Breakfast</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab"
-                        aria-controls="messages" aria-selected="false">Messages</a>
+                        aria-controls="messages" aria-selected="false">Main Dishes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab"
-                        aria-controls="settings" aria-selected="false">Settings</a>
+                        aria-controls="settings" aria-selected="false">Salads</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab"
+                        aria-controls="settings" aria-selected="false">Drinks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab"
+                        aria-controls="settings" aria-selected="false">Desserts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab"
+                        aria-controls="settings" aria-selected="false">Salads</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab"
+                        aria-controls="settings" aria-selected="false">Fries and Nachos</a>
                 </li>
             </ul>
 
@@ -157,19 +165,19 @@
 
         </div>
         <div class='thirdcol'>
-            <div onclick="location.href='/';">
+            <!-- <div onclick="location.href='/';">
                 <img id="FDB" src="/static/images/homepage/FeedBack.png" alt="FeedBack icon">
                 <p>FeedBack</p>
-            </div>
-            <div onclick="location.href='/';">
+            </div> -->
+            <div onclick="location.href='/cart/';">
                 <img src="/static/images/homepage/cart.png" alt="cart icon">
                 <p>My cart</p>
             </div>
-            <div onclick="location.href='/';">
+            <div onclick="location.href='/cart/';">
                 <img src="/static/images/homepage/buy.png" alt="order icon">
                 <p>Order Now</p>
             </div>
-            <div onclick="location.href='/';">
+            <div onclick="location.href='/contact/';">
                 <img id="CUS" src="/static/images/homepage/contactUs.png" alt="contact Us icon">
                 <p>Contact Us</p>
             </div>
