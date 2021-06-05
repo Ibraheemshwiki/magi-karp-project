@@ -10,13 +10,9 @@ def index(request):
     if 'signin' not in request.session and 'signup' not in request.session:
         request.session['signin'] = 'block'
         request.session['signup'] = 'none'
-
-# Create your views here.
-
-
+    return render(request, 'home.html')
 def details(request):
     return render(request, 'details.html')
-
 
 def admin (request):
     context = {
