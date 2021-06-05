@@ -97,42 +97,11 @@
             <div class="tab-content" id="tab-content">
                 <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <div class="contandiv">
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
+                        {%for item in breakfast%}
+                        <div class="item"><img src="static/images/thumbnails/Breakfast/{{item.name}}.jpg">
+                            <p>{{item.name}} Price : {{item.price}}</p>
+                        </div>
+                        {%endfor%}
                     </div>
                 </div>
                 <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">

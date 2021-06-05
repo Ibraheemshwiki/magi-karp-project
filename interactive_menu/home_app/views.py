@@ -19,8 +19,12 @@ def details(request):
 
 
 def home(request):
+    context = {
+        'breakfast' : getcategory('breakfast')
+        
+    }
 
-    return render(request, 'homeTemp.html')
+    return render(request, 'homeTemp.html',context)
 
 
 
@@ -61,6 +65,7 @@ def log_in(request):
 
 def welcome(request):
     return render(request,'slide_page.html')
+
 
 
 

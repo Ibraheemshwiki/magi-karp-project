@@ -60,7 +60,7 @@ class Cart(models.Model):
 
 class Item(models.Model):
     name = models.CharField(max_length=45)
-    category = models.ForeignKey(Category, related_name = 'items')
+    category = models.ForeignKey(Category, related_name = 'items', on_delete = models.CASCADE)
     price = models.IntegerField()
 
 
@@ -103,3 +103,8 @@ def check_email(postData):
             return errors
     errors['login'] = "user name or password not valide"
     return errors
+
+
+def getcategory(catname):
+    return Item.objects.filter(category=Category.objects.get(name=catname))
+    
