@@ -90,7 +90,7 @@
                 <div class="tab-pane active" id="all" role="tabpanel" aria-labelledby="home-tab">
                     <div class="contandiv">
                         {%for item in allitem%}
-                        <div class="item"><img src="static/images/thumbnails/{{item.category.name}}/{{item.name}}.jpg">
+                        <div class="item"><a href="/details/{{item.id}}/"><img  src="/static/images/thumbnails/{{item.category.name}}/{{item.name}}.jpg"></a>
                             <div class="pricename">
                                 <p>{{item.name}} </p>
                                 <p>Price : {{item.price}}</p>
@@ -103,7 +103,7 @@
                 <div class="contandiv">
 
                     {%for item in breakfast%}
-                    <div class="item"><img src="static/images/thumbnails/Breakfast/{{item.name}}.jpg">
+                    <div class="item"><a href="/details/{{item.id}}/"><img src="/static/images/thumbnails/Breakfast/{{item.name}}.jpg"></a>
                         <div class="pricename">
                             <p>{{item.name}} </p>
                             <p>Price : {{item.price}}</p>
@@ -116,7 +116,7 @@
             <div class="tab-pane" id="main" role="tabpanel" aria-labelledby="messages-tab">
                 <div class="contandiv">
                     {%for item in maindishes%}
-                    <div class="item"><img src="static/images/thumbnails/Maindishes/{{item.name}}.jpg">
+                    <div class="item"><a href="/details/{{item.id}}/"><img src="/static/images/thumbnails/Maindishes/{{item.name}}.jpg"></a>
                         <div class="pricename">
                             <p>{{item.name}} </p>
                             <p>Price : {{item.price}}</p>
@@ -128,7 +128,7 @@
             <div class="tab-pane" id="salads" role="tabpanel" aria-labelledby="settings-tab">
                 <div class="contandiv">
                 {%for item in salads%}
-                <div class="item"><img src="static/images/thumbnails/Salads/{{item.name}}.jpg">
+                <div class="item"><a href="/details/{{item.id}}/"><img src="/static/images/thumbnails/Salads/{{item.name}}.jpg"></a>
                     <div class="pricename">
                         <p>{{item.name}} </p>
                         <p>Price : {{item.price}}</p>
@@ -141,7 +141,7 @@
                 <div class="contandiv">
 
                     {%for item in drinks%}
-                    <div class="item"><img src="static/images/thumbnails/Drinks/{{item.name}}.jpg">
+                    <div class="item"><a href="/details/{{item.id}}/"><img src="/static/images/thumbnails/Drinks/{{item.name}}.jpg"></a>
                         <div class="pricename">
                             <p>{{item.name}} </p>
                             <p>Price : {{item.price}}</p>
@@ -155,7 +155,7 @@
                 <div class="contandiv">
 
                     {%for item in desserts%}
-                    <div class="item"><img src="static/images/thumbnails/Desserts/{{item.name}}.jpg">
+                    <div class="item"><a href="/details/{{item.id}}/"><img src="/static/images/thumbnails/Desserts/{{item.name}}.jpg"></a>
                         <div class="pricename">
                             <p>{{item.name}} </p>
                             <p>Price : {{item.price}}</p>
@@ -169,7 +169,7 @@
                 <div class="contandiv">
 
                     {%for item in sheesha%}
-                    <div class="item"><img src="static/images/thumbnails/Sheesha/{{item.name}}.jpg">
+                    <div class="item"><a href="/details/{{item.id}}/"><img src="/static/images/thumbnails/Sheesha/{{item.name}}.jpg"></a>
                         <div class="pricename">
                             <p>{{item.name}} </p>
                             <p>Price : {{item.price}}</p>

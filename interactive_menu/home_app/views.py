@@ -16,8 +16,11 @@ def index(request):
     return render(request, 'loginAndreg.html')
 
 
-def details(request):
-    return render(request, 'details.html')
+def details(request,id):
+    context={
+        'item': Item.objects.get(id=id),
+    }
+    return render(request, 'details.html',context)
 
 
 
@@ -34,7 +37,10 @@ def home(request):
     return render(request, 'homeTemp.html',context)
 
 def cart (request):
-    return render (request, 'cart.html')   
+    context={
+        'item': Item.objects.all()
+    }
+    return render (request, 'cart.html',context)   
 
 def contact (request):
     return render (request, 'contact.html')
@@ -84,9 +90,13 @@ def logout(request):
     if 'userEmail' in request.session:
         request.session.clear()
         return redirect('/loginandreg/')
-    
+    return redirect('/loginandreg/')
 
-
+def addcart(request,id):
+    context={
+        'item': Item.objects.get(id=id),
+    }
+    return redirect('/home/')
 
 
 
