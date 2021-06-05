@@ -1,7 +1,3 @@
-body {
-    background-image: url("{% static 'backgrounds/background1.jpg' %}");
-}
-
 .container {
     margin: 10px;
     text-align: center;
