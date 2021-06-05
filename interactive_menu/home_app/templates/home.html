@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Restaurant Menu</title>
 </head>
+
 <body>
-    <div class="image" >
+    <div class="image">
         <img src="{% static 'images/imgmain.jpg' %}" alt="main image" class="image__img">
         <div class="image__overlay image__overlay--blur">
             <div class="image__title"> <img src="{% static 'images/logo.png' %}" alt="Logo"> Lemon Palestine </div>
-            <h5 class="image__description">International Restaurant & Cafe combines the Quality of Food, Ambience & Crowd. <br><br>
-                <p style="font-size: 30px;" >Lemon provides premium services in a vibrant and pleasant ambiance. <br> You can find a variety of unique and high quality products that from in house bakery, delicacies, fresh produce, besides it is a place you can surely enjoy the company of family and friends, where you can enjoy a delicious meal of your choosing, delicious juices, also shesha.
-                    <br>We always aim to make our customers as comfortable as they can be, so for the families that have children they can enjoy a place where the children come to play. 
-                    <br> <br> Enjoy your stay and enjoy your meal.</p>
-                    <a href="/login"> Order now!</a>
+            <h5 class="image__description">International Restaurant & Cafe combines the Quality of Food, Ambience &
+                Crowd. <br><br>
+                <p style="font-size: 30px;">Lemon provides premium services in a vibrant and pleasant ambiance. <br> You
+                    can find a variety of unique and high quality products that from in house bakery, delicacies, fresh
+                    produce, besides it is a place you can surely enjoy the company of family and friends, where you can
+                    enjoy a delicious meal of your choosing, delicious juices, also shesha.
+                    <br>We always aim to make our customers as comfortable as they can be, so for the families that have
+                    children they can enjoy a place where the children come to play.
+                    <br> <br> Enjoy your stay and enjoy your meal.
+                </p>
+                <a href="/login"> Order now!</a>
             </h5>
-        </div> 
+        </div>
     </div>
-<!-- <header>
+    <!-- <header>
     <img src="{% static 'images/img2.jpg' %}" alt="img" ><img src="{% static 'images/img3.jpg' %}" alt="img2">
 </header>
 <article>
