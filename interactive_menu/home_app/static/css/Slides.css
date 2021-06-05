@@ -1,6 +1,6 @@
-h2 {
+h5 {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 
@@ -121,7 +121,7 @@ h2 {
 }
 
 body {
-    background-image: url('/static/thumbnails/00(5).jpg');
+    background-image: url('/static/images/backgrounds/b8.jpg');
     background-size: cover;
     background-position-y: center;
 }
