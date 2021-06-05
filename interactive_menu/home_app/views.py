@@ -22,6 +22,9 @@ def home(request):
 
     return render(request, 'homeTemp.html')
 
+def chart (request):
+    return render (request, 'chart.html')    
+
 
 def admin(request):
     context = {
