@@ -27,7 +27,10 @@ article{
     text-align: center;
     color: white;
 } */
-
+body{
+    margin: 0;
+    padding: 0;
+}
 .image{
     position: relative;
 }

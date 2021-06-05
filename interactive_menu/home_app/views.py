@@ -5,16 +5,14 @@ from django.contrib import messages
 from time import gmtime, strftime
 import time
 
+def main(request):
+    return render(request,'home.html')
 
 def index(request):
     if 'signin' not in request.session and 'signup' not in request.session:
         request.session['signin'] = 'block'
         request.session['signup'] = 'none'
-    return render(request, 'home.html')
-def details(request):
-    return render(request, 'details.html')
-
-# Create your views here.
+    return render(request, 'loginAndreg.html')
 
 
 def details(request):
@@ -26,12 +24,6 @@ def home(request):
     return render(request, 'homeTemp.html')
 
 
-def admin(request):
-    context = {
-        "date": strftime("%d %b, %y", gmtime()),
-        "time": time.strftime("%H:%M  %p", time.localtime())}
-    return render(request, 'admin.html', context)
-
 
 def registration(request):
     if 'userEmail' in request.session:
@@ -41,15 +33,15 @@ def registration(request):
         request.session['signup'] = 'block'
         request.session['signin'] = 'none'
         errors = create_user(request.POST)
-        # if no errors it will create new user
+        
         if len(errors) > 0:
             for key, value in errors.items():
                 messages.error(request, value)
-            return redirect('/')
+            return redirect('/login/')
         elif len(errors) == 0:
             request.session['userEmail'] = request.POST['email']
-            return redirect('/')
-    return redirect('/')
+            return redirect('/welcome/')
+    return redirect('/welcome/')
 
 
 def log_in(request):
@@ -62,7 +54,13 @@ def log_in(request):
         if len(errors) > 0:
             for key, value in errors.items():
                 messages.error(request, value)
-            return redirect('/')
+            return redirect('/login/')
         elif len(errors) == 0:
             request.session['userEmail'] = request.POST['email']
-            return redirect('/')
+            return redirect('/welcome/')
+
+def admin(request):
+    context = {
+        "date": strftime("%d %b, %y", gmtime()),
+        "time": time.strftime("%H:%M  %p", time.localtime())}
+    return render(request, 'admin.html', context)
