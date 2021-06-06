@@ -107,10 +107,14 @@ def sendfeedback(request):
     Feedback.objects.create(description=request.POST['description'])
     return redirect('/cart/')
 
-def submit_order(request,id):
-    Order.objects.create(user = checkEmail(request.session['userEmail']),cart=Cart.objects.filter(id=id))
-
-    return redirect('/Thankyou')
+def submit_order(request):
+    thisuser = User.objects.get(email=request.session['userEmail'])
+    carts=Cart.objects.all()
+    order= f'{thisuser.first_name} {thisuser.last_name}'
+    for i in carts:
+        order+=(f" || {i.item.name} || quantity {i.quantity}  ||price{i.item.price}")
+    thisorder=Order.objects.create(orderdesc=order)
+    return redirect('/thankyou/')
     
 def details(request,id):
     context={
@@ -122,3 +126,6 @@ def delete(request,id):
     itemdel= Item.objects.get(id=id)
     itemdel.delete()
     return redirect('/cart/')
+
+def thankyou(request):
+    return render(request,'thanks.html')
