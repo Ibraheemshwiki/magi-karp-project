@@ -15,4 +15,5 @@ urlpatterns = [
     path('welcome/',views.welcome),
     path('addcart/<int:id>/',views.addcart),
     path('sendfeedback/',views.sendfeedback),
+    path('thanks', views.thanks), 
 ]

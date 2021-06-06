@@ -121,3 +121,8 @@ def admin(request):
         "date": strftime("%d %b, %y", gmtime()),
         "time": time.strftime("%H:%M  %p", time.localtime())}
     return render(request, 'admin.html', context)
+
+
+
+def thanks(request):
+    return render (request, 'thanks.html')
