@@ -120,7 +120,16 @@ def admin(request):
     return render(request, 'admin.html', context)
 
 
-def submit_order(request,id):
-    Order.objects.create(user = checkEmail(request.session['userEmail']),cart=Cart.objects.filter(id=id))
+def submit_order(request):
+    thisuser = User.objects.get(email=request.session['userEmail'])
+    carts=Cart.objects.all()
+    order= f'{thisuser.first_name} {thisuser.last_name}'
+    for i in carts:
+        order+=(f" || {i.item.name} || quantity {i.quantity}  ||price{i.item.price}")
+
+   
+    thisorder=Order.objects.create(cart=orderdesc=order)
+    
+
 
     return redirect('/Thankyou')
