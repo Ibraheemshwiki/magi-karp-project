@@ -116,8 +116,4 @@ def sendfeedback(request):
     return redirect('/cart/')
 
 
-def admin(request):
-    context = {
-        "date": strftime("%d %b, %y", gmtime()),
-        "time": time.strftime("%H:%M  %p", time.localtime())}
-    return render(request, 'admin.html', context)
+
