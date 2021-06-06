@@ -38,9 +38,7 @@ class User(models.Model):
 
 
 class Feedback(models.Model):
-    description = models.TextField
-    uploaded_by = models.ForeignKey(
-        User, related_name="feedback_uploaded", on_delete=models.CASCADE)
+    description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -51,22 +49,23 @@ class Category(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
 
-class Cart(models.Model):
-    user = models.ForeignKey(User, related_name="cart",
-                            on_delete=models.CASCADE)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
 
 
 class Item(models.Model):
     name = models.CharField(max_length=45)
     category = models.ForeignKey(Category, related_name = 'items', on_delete = models.CASCADE,null=True)
+    desc = models.TextField(default="descriptions about the items")
     price = models.IntegerField()
+    quantity=models.IntegerField(default=1)
 
+class Cart(models.Model):
+    user = models.ForeignKey(User, related_name="cart",on_delete=models.CASCADE)
+    item = models.ManyToManyField(Item ,related_name='carts')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 class Order(models.Model):
-    cart = models.ForeignKey(Cart, related_name="order",
-                            on_delete=models.CASCADE)
+    cart = models.ForeignKey(Cart, related_name="order",on_delete=models.CASCADE)
     users_who_like = models.ManyToManyField(
         User, related_name="liked_thoughts")
 
@@ -109,3 +108,8 @@ def getcategory(catname):
 
 def getallitem():
     return Item.objects.all()
+
+def checkEmail(postemail):
+    users = User.objects.filter(email=postemail)
+    if len(users)>0:
+        return users[0]

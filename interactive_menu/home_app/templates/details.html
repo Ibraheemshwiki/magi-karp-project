@@ -41,7 +41,7 @@
         <div id="order">
             <form action="/addcart/{{item.id}}/" method="POST">
                 {%csrf_token%}
-                <input type="number" id="counter" placeholder="Quantity" name="quantity">
+                <input type="number" id="counter" placeholder="{{item.quantity}}" name="quantity">
                 <button class="btn btn-primary btn-lg" type="submit">Order Now</button>
             </form>
             

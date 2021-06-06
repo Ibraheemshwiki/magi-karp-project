@@ -14,4 +14,5 @@ urlpatterns = [
     path('home/', views.home),
     path('welcome/',views.welcome),
     path('addcart/<int:id>/',views.addcart),
+    path('sendfeedback/',views.sendfeedback),
 ]

@@ -36,11 +36,6 @@ def home(request):
     }
     return render(request, 'homeTemp.html',context)
 
-def cart (request):
-    context={
-        'item': Item.objects.all()
-    }
-    return render (request, 'cart.html',context)   
 
 def contact (request):
     return render (request, 'contact.html')
@@ -93,14 +88,23 @@ def logout(request):
     return redirect('/loginandreg/')
 
 def addcart(request,id):
+
+
     context={
+        
         'item': Item.objects.get(id=id),
+        'cart':Cart.objects.all(),
     }
     return redirect('/home/')
 
+def cart (request):
+    
+    return render (request, 'cart.html')   
 
 
-
+def sendfeedback(request):
+    Feedback.objects.create(description=request.POST['description'])
+    return redirect('/cart/')
 
 
 def admin(request):
