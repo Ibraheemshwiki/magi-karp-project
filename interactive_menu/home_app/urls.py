@@ -16,4 +16,5 @@ urlpatterns = [
     path('sendfeedback/',views.sendfeedback),
     path('submit_order/', views.submit_order),
     path('delete/<int:id>/',views.delete),
+    path('thankyou/',views.thankyou),
 ]
