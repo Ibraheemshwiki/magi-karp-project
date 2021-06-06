@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> 
-    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> {% load static %}
     <link rel="stylesheet" href="{% static 'css/cart.css' %}">
-    
+
     <title>My Chart</title>
 </head>
 
@@ -33,55 +32,58 @@
                         <th scope="col">Item</th>
                         <th scope="col">Price</th>
                         <th scope="col">Amount</th>
-                        
+
                         <th scope="col">Actions</th>
 
                     </tr>
                 </thead>
                 <tbody>
-                    
-                    {%for i in item%}
-                    <tr>
-                        <th scope="row">{{i.id}}</th>
-                        <td>{{i.name}}</td>
-                        <td>{{i.price}}</td>
-                        <td>{{i.quantity}}</td>
-                        <td><a href="/delete/{{i.id}}/">Delete</a></td>
-                    </tr>
-                    
-                    {% endfor %}
+                    <<<<<<< HEAD=======>>>>>>> e42632a97fb5100dcc5bacb6ecefedbb16076feb {%for i in item%}
+                        <tr>
+                            <th scope="row">{{i.id}}</th>
+                            <td>{{i.name}}</td>
+                            <td>{{i.price}}</td>
+                            <td>{{i.quantity}}</td>
+                            <td><a href="/delete/{{i.id}}/">Delete</a></td>
+                        </tr>
+                        <<<<<<< HEAD=======>>>>>>> e42632a97fb5100dcc5bacb6ecefedbb16076feb {% endfor %}
 
                 </tbody>
             </table>
-            <div class="total">
-                
-                <p>Total: {{total}}</p>
-            </div>
-            <button class="open-button" id="btn" onclick="openForm()">Any Feedback ?</button>
+            <<<<<<< HEAD <a href="/submit_order" class="btn" title="Click to confirm Order">Check Now</a>
+                <div class="total">
 
-            <div class="chat-popup" id="myForm">
-                <form action="/sendfeedback/" method="POST" class="form-container">
-                    {%csrf_token%}
-                    <h4>Write your feedback here:</h4>
+                    =======
+                    <div class="total">
 
-                    <label for="msg"><b>Message</b></label>
-                    <textarea placeholder="Type Feedback.." name="description" required></textarea>
+                        >>>>>>> e42632a97fb5100dcc5bacb6ecefedbb16076feb
+                        <p>Total: {{total}}</p>
+                    </div>
+                    <button class="open-button" id="btn" onclick="openForm()">Any Feedback ?</button>
 
-                    <button type="submit" class="btn">Send</button>
-                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                </form>
-            </div>
-        </div>
+                    <div class="chat-popup" id="myForm">
+                        <form action="/sendfeedback/" method="POST" class="form-container">
+                            {%csrf_token%}
+                            <h4>Write your feedback here:</h4>
 
-        <script>
-            function openForm() {
-                document.getElementById("myForm").style.display = "block";
-            }
+                            <label for="msg"><b>Message</b></label>
+                            <textarea placeholder="Type Feedback.." name="description" required></textarea>
 
-            function closeForm() {
-                document.getElementById("myForm").style.display = "none";
-            }
-        </script>
+                            <button type="submit" class="btn">Send</button>
+                            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                        </form>
+                    </div>
+                </div>
+
+                <script>
+                    function openForm() {
+                        document.getElementById("myForm").style.display = "block";
+                    }
+
+                    function closeForm() {
+                        document.getElementById("myForm").style.display = "none";
+                    }
+                </script>
 </body>
 
 </html>
