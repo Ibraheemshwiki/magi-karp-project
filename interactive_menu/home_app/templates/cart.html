@@ -38,50 +38,52 @@
                     </tr>
                 </thead>
                 <tbody>
-
-                    {%for i in item%}
-                    <tr>
-                        <th scope="row">{{i.id}}</th>
-                        <td>{{i.name}}</td>
-                        <td>{{i.price}}</td>
-                        <td>{{i.quantity}}</td>
-                        <td><a href="/delete/{{i.id}}/">Delete</a></td>
-                    </tr>
-
-                    {% endfor %}
+                    <<<<<<< HEAD=======>>>>>>> e42632a97fb5100dcc5bacb6ecefedbb16076feb {%for i in item%}
+                        <tr>
+                            <th scope="row">{{i.id}}</th>
+                            <td>{{i.name}}</td>
+                            <td>{{i.price}}</td>
+                            <td>{{i.quantity}}</td>
+                            <td><a href="/delete/{{i.id}}/">Delete</a></td>
+                        </tr>
+                        <<<<<<< HEAD=======>>>>>>> e42632a97fb5100dcc5bacb6ecefedbb16076feb {% endfor %}
 
                 </tbody>
             </table>
-            <a href="/submit_order" class="btn" title="Click to confirm Order">Check Now</a>
-            <div class="total">
+            <<<<<<< HEAD <a href="/submit_order" class="btn" title="Click to confirm Order">Check Now</a>
+                <div class="total">
 
-                <p>Total: {{total}}</p>
-            </div>
-            <button class="open-button" id="btn" onclick="openForm()">Any Feedback ?</button>
+                    =======
+                    <div class="total">
 
-            <div class="chat-popup" id="myForm">
-                <form action="/sendfeedback/" method="POST" class="form-container">
-                    {%csrf_token%}
-                    <h4>Write your feedback here:</h4>
+                        >>>>>>> e42632a97fb5100dcc5bacb6ecefedbb16076feb
+                        <p>Total: {{total}}</p>
+                    </div>
+                    <button class="open-button" id="btn" onclick="openForm()">Any Feedback ?</button>
 
-                    <label for="msg"><b>Message</b></label>
-                    <textarea placeholder="Type Feedback.." name="description" required></textarea>
+                    <div class="chat-popup" id="myForm">
+                        <form action="/sendfeedback/" method="POST" class="form-container">
+                            {%csrf_token%}
+                            <h4>Write your feedback here:</h4>
 
-                    <button type="submit" class="btn">Send</button>
-                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                </form>
-            </div>
-        </div>
+                            <label for="msg"><b>Message</b></label>
+                            <textarea placeholder="Type Feedback.." name="description" required></textarea>
 
-        <script>
-            function openForm() {
-                document.getElementById("myForm").style.display = "block";
-            }
+                            <button type="submit" class="btn">Send</button>
+                            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                        </form>
+                    </div>
+                </div>
 
-            function closeForm() {
-                document.getElementById("myForm").style.display = "none";
-            }
-        </script>
+                <script>
+                    function openForm() {
+                        document.getElementById("myForm").style.display = "block";
+                    }
+
+                    function closeForm() {
+                        document.getElementById("myForm").style.display = "none";
+                    }
+                </script>
 </body>
 
 </html>
