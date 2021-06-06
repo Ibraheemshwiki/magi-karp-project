@@ -66,7 +66,7 @@ class Cart(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
 class Order(models.Model):
-    cart = models.ForeignKey(Cart, related_name="order",on_delete=models.CASCADE)
+    orderdesc=models.TextField(default=' ')
     users_who_like = models.ManyToManyField(
         User, related_name="liked_thoughts")
 
