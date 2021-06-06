@@ -5,7 +5,6 @@ urlpatterns = [
     path('',views.main),
     path('loginandreg/', views.index),
     path('details/<int:id>/', views.details),
-
     path('logout/',views.logout),
     path('cart/', views.cart),
     path('contact/', views.contact),
@@ -16,8 +15,5 @@ urlpatterns = [
     path('addcart/<int:id>/',views.addcart),
     path('sendfeedback/',views.sendfeedback),
     path('submit_order/', views.submit_order),
-<<<<<<< HEAD
-=======
     path('delete/<int:id>/',views.delete),
->>>>>>> 917680c7787b2968fa60af57487dfa39748f4850
 ]

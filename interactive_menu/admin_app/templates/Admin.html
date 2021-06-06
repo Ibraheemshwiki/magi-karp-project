@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% load static %}
     <link rel="stylesheet" href="{% static 'css/admin.css' %}">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -33,15 +32,9 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-<<<<<<< HEAD
-                        <th scope="col">Date and Time</th>
-                        <th scope="col">User Name</th>
-                        <th scope="col">Table Number</th>
-=======
                         <th scope="col">User Name</th>
                         <th scope="col">Table Number</th>
                         <th scope="col">Date and Time</th>
->>>>>>> 917680c7787b2968fa60af57487dfa39748f4850
                         <th scope="col">Ordered Items</th>
                         <th scope="col">Actions</th>
 
@@ -51,19 +44,11 @@
                     {%for i in order%}
                     <tr>
                         <th scope="row">{{i.id}}</th>
-<<<<<<< HEAD
-                        <td>{i.date and time}</td>
-                        <td>{i.user name}</td>
-                        <td>{i.table number}</td>
-                        <td>{i.ordered items}</td>
-                        <td><a href="#">Delete</a></td>
-=======
                         <td>{i.user name}</td>
                         <td>{i.table number}</td>
                         <td>{i.created_at}</td>
                         <td>{i.ordered items}</td>
                         <td><a href="/admin/delete/{{i.id}}">Delete</a></td>
->>>>>>> 917680c7787b2968fa60af57487dfa39748f4850
 
                     </tr>
                     {% endfor %}
@@ -76,9 +61,9 @@
 
                 <ul>
                     {% for i in feedback %}
-                    <li> 
-                        {{i.description}} 
-                        
+                    <li>
+                        {{i.description}}
+
                     </li>
                     {% endfor %}
 

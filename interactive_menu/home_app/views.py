@@ -118,23 +118,7 @@ def details(request,id):
     }
     return render(request, 'details.html',context)
 
-<<<<<<< HEAD
-def submit_order(request):
-    thisuser = User.objects.get(email=request.session['userEmail'])
-    carts=Cart.objects.all()
-    order= f'{thisuser.first_name} {thisuser.last_name}'
-    for i in carts:
-        order+=(f" || {i.item.name} || quantity {i.quantity}  ||price{i.item.price}")
-
-   
-    thisorder=Order.objects.create(cart=orderdesc=order)
-    
-
-
-    return redirect('/Thankyou')
-=======
 def delete(request,id):
     itemdel= Item.objects.get(id=id)
     itemdel.delete()
     return redirect('/cart/')
->>>>>>> 917680c7787b2968fa60af57487dfa39748f4850
