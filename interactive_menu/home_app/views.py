@@ -87,19 +87,28 @@ def logout(request):
         return redirect('/loginandreg/')
     return redirect('/loginandreg/')
 
-def addcart(request,id):
+def addcart(request, id):
+    request.POST['quantity']
 
-
-    context={
-        
-        'item': Item.objects.get(id=id),
-        'cart':Cart.objects.all(),
-    }
+    thisuser = User.objects.get(email=request.session['userEmail'])
+    thisitem = Item.objects.get(id=id)
+    thecart = Cart.objects.create(
+        user=thisuser, quantity=request.POST['quantity'])
+    thecart.item.add(thisitem)
     return redirect('/home/')
 
 def cart (request):
+    cart= Cart.objects.all()
     
-    return render (request, 'cart.html')   
+    sum=0
+    for i in cart:
+        item=Item.objects.all()
+        sum+=(i.item.price * i.quantity)
+    contaxt={
+        'cart': Cart.objects.all(),
+        'total':sum,
+    }
+    return render (request, 'cart.html',contaxt)   
 
 
 def sendfeedback(request):

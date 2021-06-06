@@ -5,110 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> {% load static %}
-    <style>
-        .edit {
-            display: inline-block;
-            margin-left: 50px
-        }
-        
-        .cart {
-            margin-left: 50px;
-            margin-top: 20px;
-        }
-        
-        #nav {
-            font-size: 34px;
-        }
-        
-        hr {
-            margin-right: 30px;
-        }
-        /* Button used to open the chat form - fixed at the bottom of the page */
-        
-        .open-button {
-            background-color: black;
-            color: white;
-            padding: 16px 20px;
-            border: none;
-            cursor: pointer;
-            opacity: 0.8;
-            position: fixed;
-            bottom: 23px;
-            right: 28px;
-            width: 280px;
-        }
-        /* The popup chat - hidden by default */
-        
-        .chat-popup {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            right: 15px;
-            border: 3px solid #f1f1f1;
-            z-index: 9;
-        }
-        /* Add styles to the form container */
-        
-        .form-container {
-            max-width: 300px;
-            padding: 10px;
-            background-color: white;
-        }
-        /* Full-width textarea */
-        
-        .form-container textarea {
-            width: 100%;
-            padding: 15px;
-            margin: 5px 0 22px 0;
-            border: none;
-            background: #f1f1f1;
-            resize: none;
-            min-height: 200px;
-        }
-        /* When the textarea gets focus, do something */
-        
-        .form-container textarea:focus {
-            background-color: #ddd;
-            outline: none;
-        }
-        /* Set a style for the submit/send button */
-        
-        .form-container .btn {
-            background-color: #04AA6D;
-            color: white;
-            padding: 16px 20px;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            margin-bottom: 10px;
-            opacity: 0.8;
-        }
-        /* Add a red background color to the cancel button */
-        
-        .form-container .cancel {
-            background-color: red;
-        }
-        /* Add some hover effects to buttons */
-        
-        .form-container .btn:hover,
-        .open-button:hover {
-            opacity: 1;
-        }
-        
-        body {
-            background-image: url("{% static 'backgrounds/b5.jpg' %}");
-            color: white;
-        }
-        
-        b {
-            color: white;
-        }
-        
-        #btn {
-            background-color: #dc3545;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> 
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+    
     <title>My Chart</title>
 </head>
 
@@ -139,6 +39,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    
                     {%for i in item%}
                     <tr>
                         <th scope="row">{{i.id}}</th>
@@ -146,12 +47,16 @@
                         <td>{{i.price}}</td>
                         <td>{{i.quantity}}</td>
                         <td><a href="/delete/{{i.id}}/">Delete</a></td>
-
                     </tr>
+                    
                     {% endfor %}
 
                 </tbody>
             </table>
+            <div class="total">
+                
+                <p>Total: {{total}}</p>
+            </div>
             <button class="open-button" id="btn" onclick="openForm()">Any Feedback ?</button>
 
             <div class="chat-popup" id="myForm">

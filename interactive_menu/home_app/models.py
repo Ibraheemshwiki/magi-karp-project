@@ -56,11 +56,12 @@ class Item(models.Model):
     category = models.ForeignKey(Category, related_name = 'items', on_delete = models.CASCADE,null=True)
     desc = models.TextField(default="descriptions about the items")
     price = models.IntegerField()
-    quantity=models.IntegerField(default=1)
+    
 
 class Cart(models.Model):
     user = models.ForeignKey(User, related_name="cart",on_delete=models.CASCADE)
     item = models.ManyToManyField(Item ,related_name='carts')
+    quantity=models.IntegerField(default=1)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

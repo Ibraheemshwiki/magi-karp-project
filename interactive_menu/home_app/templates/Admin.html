@@ -4,30 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% load static %}
-    <style>
-        .time {
-            display: inline-flex;
-        }
-        
-        body {
-            background-image: url("{% static 'backgrounds/b5.jpg' %}");
-        }
-        
-        fieldset {
-            color: white;
-        }
-        
-        .table {
-            display: flex;
-        }
-        
-        .feed {
-            border: 2px solid white;
-            color: white;
-            padding: 12px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title>Admin' Page</title>
 </head>
