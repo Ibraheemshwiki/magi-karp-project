@@ -43,9 +43,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {%for i in admin%}
+                    {%for i in order%}
                     <tr>
-                        <th scope="row">1</th>
+                        <th scope="row">{{i.id}}</th>
                         <td>{i.date and time}</td>
                         <td>{i.user name}</td>
                         <td>{i.table number}</td>
@@ -62,9 +62,12 @@
                 <h3>Feedback: </h3>
 
                 <ul>
-                    <li> {%for i in admin%} {{i.feedback}} {%endfor%}
+                    {%for i in feedback%}
+                    <li> 
+                        {{i.feedback}} 
+                        
                     </li>
-
+                    {%endfor%}
 
                 </ul>
 
