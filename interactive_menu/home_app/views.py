@@ -16,11 +16,6 @@ def index(request):
     return render(request, 'loginAndreg.html')
 
 
-def details(request,id):
-    context={
-        'item': Item.objects.get(id=id),
-    }
-    return render(request, 'details.html',context)
 
 
 
@@ -112,14 +107,18 @@ def sendfeedback(request):
     Feedback.objects.create(description=request.POST['description'])
     return redirect('/cart/')
 
+def submit_order(request,id):
+    Order.objects.create(user = checkEmail(request.session['userEmail']),cart=Cart.objects.filter(id=id))
 
-def admin(request):
-    context = {
-        "date": strftime("%d %b, %y", gmtime()),
-        "time": time.strftime("%H:%M  %p", time.localtime())}
-    return render(request, 'admin.html', context)
+    return redirect('/Thankyou')
+    
+def details(request,id):
+    context={
+        'item': Item.objects.get(id=id),
+    }
+    return render(request, 'details.html',context)
 
-
+<<<<<<< HEAD
 def submit_order(request):
     thisuser = User.objects.get(email=request.session['userEmail'])
     carts=Cart.objects.all()
@@ -133,3 +132,9 @@ def submit_order(request):
 
 
     return redirect('/Thankyou')
+=======
+def delete(request,id):
+    itemdel= Item.objects.get(id=id)
+    itemdel.delete()
+    return redirect('/cart/')
+>>>>>>> 917680c7787b2968fa60af57487dfa39748f4850

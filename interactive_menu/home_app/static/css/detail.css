@@ -15,15 +15,17 @@
 }
 
 #counter {
-    width: 87px;
-    transform: translateY(10px);
-    margin-left: 6px;
+    width: 100px;
+    height: 45px;
+    transform: translateY(4px);
+    margin-top: -20px;
 }
 
 .tag {
     display: inline-block;
     width: 89px;
     height: 30px;
+    padding-top: 2px;
     background-color: #983418;
     -webkit-border-radius: 3px 4px 4px 3px;
     -moz-border-radius: 3px 4px 4px 3px;
@@ -32,8 +34,14 @@
 }
 a {
     margin-right: 900px;
-    background-color: #171511;
+    
     color: white;
     border-radius: 2px;
     border: solid, black;
+}
+.previous{
+    color: white;
+}
+button{
+    margin-bottom: -10px;
 }

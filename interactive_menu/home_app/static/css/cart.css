@@ -99,3 +99,9 @@ b {
 #btn {
     background-color: #dc3545;
 }
+.previous{
+    color: black;
+}
+.delete{
+    color: white;
+}

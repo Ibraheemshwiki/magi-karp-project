@@ -33,9 +33,15 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
+<<<<<<< HEAD
                         <th scope="col">Date and Time</th>
                         <th scope="col">User Name</th>
                         <th scope="col">Table Number</th>
+=======
+                        <th scope="col">User Name</th>
+                        <th scope="col">Table Number</th>
+                        <th scope="col">Date and Time</th>
+>>>>>>> 917680c7787b2968fa60af57487dfa39748f4850
                         <th scope="col">Ordered Items</th>
                         <th scope="col">Actions</th>
 
@@ -45,11 +51,19 @@
                     {%for i in order%}
                     <tr>
                         <th scope="row">{{i.id}}</th>
+<<<<<<< HEAD
                         <td>{i.date and time}</td>
                         <td>{i.user name}</td>
                         <td>{i.table number}</td>
                         <td>{i.ordered items}</td>
                         <td><a href="#">Delete</a></td>
+=======
+                        <td>{i.user name}</td>
+                        <td>{i.table number}</td>
+                        <td>{i.created_at}</td>
+                        <td>{i.ordered items}</td>
+                        <td><a href="/admin/delete/{{i.id}}">Delete</a></td>
+>>>>>>> 917680c7787b2968fa60af57487dfa39748f4850
 
                     </tr>
                     {% endfor %}

@@ -16,7 +16,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
             <div class="container-md">
                 <h1> <a class="navbar-brand" href="#" id="nav">My Chart</a></h1>
-                <a href="/home/">Previous page</a>
+                <a class="previous" href="/home/">Previous page</a>
 
             </div>
         </nav>
@@ -44,13 +44,17 @@
                         <td>{{i.item.name}}</td>
                         <td>{{i.item.price}}</td>
                         <td>{{i.quantity}}</td>
-                        <td><a href="/delete/{{i.id}}/">Delete</a></td>
+                        <td><a class="delete" href="/delete/{{i.id}}/">Delete</a></td>
                     </tr>
                     {% endfor %}
 
                 </tbody>
             </table>
+<<<<<<< HEAD
             <a href="/submit_order/{{i.id}}" class="btn" title="Click to confirm Order">Check Out</a>
+=======
+            <a href="/submit_order" class="btn btn-secondary" title="Click to confirm Order">Check Now</a>
+>>>>>>> 917680c7787b2968fa60af57487dfa39748f4850
             <div class="total">
 
 
