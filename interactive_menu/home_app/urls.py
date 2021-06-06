@@ -15,5 +15,5 @@ urlpatterns = [
     path('welcome/',views.welcome),
     path('addcart/<int:id>/',views.addcart),
     path('sendfeedback/',views.sendfeedback),
-    path('/submit_order', views.submit_order),
+    path('/submit_order/<int:id>', views.submit_order),
 ]

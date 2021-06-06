@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> {% load static %}
     <link rel="stylesheet" href="{% static 'css/cart.css' %}">
 
-    <title>My Chart</title>
+    <title>My Cart</title>
 </head>
 
 <body>
@@ -50,7 +50,7 @@
 
                 </tbody>
             </table>
-            <a href="/submit_order" class="btn" title="Click to confirm Order">Check Now</a>
+            <a href="/submit_order/{{i.id}}" class="btn" title="Click to confirm Order">Check Out</a>
             <div class="total">
 
 
@@ -64,7 +64,6 @@
                         {%csrf_token%}
                         <h4>Write your feedback here:</h4>
 
-                        <label for="msg"><b>Message</b></label>
                         <textarea placeholder="Type Feedback.." name="description" required></textarea>
 
                         <button type="submit" class="btn">Send</button>

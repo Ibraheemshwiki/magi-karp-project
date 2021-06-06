@@ -120,3 +120,7 @@ def admin(request):
     return render(request, 'admin.html', context)
 
 
+def submit_order(request,id):
+    Order.objects.create(user = checkEmail(request.session['userEmail']),cart=Cart.objects.filter(id=id))
+
+    return redirect('/Thankyou')
