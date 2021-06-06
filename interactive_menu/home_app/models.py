@@ -60,7 +60,7 @@ class Item(models.Model):
 
 class Cart(models.Model):
     user = models.ForeignKey(User, related_name="cart",on_delete=models.CASCADE)
-    item = models.ManyToManyField(Item ,related_name='carts')
+    item = models.ForeignKey(Item ,related_name='carts',on_delete=models.CASCADE,default=1)
     quantity=models.IntegerField(default=1)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
