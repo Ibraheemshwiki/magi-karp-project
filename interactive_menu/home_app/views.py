@@ -92,21 +92,18 @@ def addcart(request, id):
 
     thisuser = User.objects.get(email=request.session['userEmail'])
     thisitem = Item.objects.get(id=id)
-    thecart = Cart.objects.create(
-        user=thisuser, quantity=request.POST['quantity'])
-    thecart.item.add(thisitem)
+    Cart.objects.create(user = thisuser,item = thisitem,quantity=request.POST['quantity'])
     return redirect('/home/')
 
 def cart (request):
     cart= Cart.objects.all()
-    
     sum=0
     for i in cart:
-        item=Item.objects.all()
+    
         sum+=(i.item.price * i.quantity)
     contaxt={
-        'cart': Cart.objects.all(),
-        'total':sum,
+    'cart': Cart.objects.all(),
+    'total':sum,
     }
     return render (request, 'cart.html',contaxt)   
 
@@ -121,3 +118,5 @@ def admin(request):
         "date": strftime("%d %b, %y", gmtime()),
         "time": time.strftime("%H:%M  %p", time.localtime())}
     return render(request, 'admin.html', context)
+
+
