@@ -94,3 +94,6 @@ body{
     color: white;
     text-shadow: 2px 2px 8px rgb(241, 241, 18);
 }
+a{
+    border: 1px solid rgb(241, 241, 18) ;
+}

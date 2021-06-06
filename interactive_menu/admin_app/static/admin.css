@@ -1,0 +1,21 @@
+.time {
+    display: inline-flex;
+}
+
+body {
+    background-image: url("{% static 'backgrounds/b5.jpg' %}");
+}
+
+fieldset {
+    color: white;
+}
+
+.table {
+    display: flex;
+}
+
+.feed {
+    border: 2px solid white;
+    color: white;
+    padding: 12px;
+}
