@@ -1,3 +1,3 @@
 from django.db import models
-from home_app.models import Feedback, Order
+from home_app.models import Feedback,Order,Cart
 # Create your models here.

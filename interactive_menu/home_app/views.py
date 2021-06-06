@@ -16,11 +16,6 @@ def index(request):
     return render(request, 'loginAndreg.html')
 
 
-def details(request,id):
-    context={
-        'item': Item.objects.get(id=id),
-    }
-    return render(request, 'details.html',context)
 
 
 
@@ -112,5 +107,18 @@ def sendfeedback(request):
     Feedback.objects.create(description=request.POST['description'])
     return redirect('/cart/')
 
+def submit_order(request,id):
+    Order.objects.create(user = checkEmail(request.session['userEmail']),cart=Cart.objects.filter(id=id))
 
+    return redirect('/Thankyou')
+    
+def details(request,id):
+    context={
+        'item': Item.objects.get(id=id),
+    }
+    return render(request, 'details.html',context)
 
+def delete(request,id):
+    itemdel= Item.objects.get(id=id)
+    itemdel.delete()
+    return redirect('/cart/')
