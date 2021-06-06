@@ -1,3 +1,5 @@
+
+
 .container {
     margin: 10px;
     text-align: center;
@@ -27,4 +29,11 @@
     -moz-border-radius: 3px 4px 4px 3px;
     border-radius: 3px 4px 4px 3px;
     border-left: 1px solid #983418;
+}
+a {
+    margin-right: 900px;
+    background-color: #171511;
+    color: white;
+    border-radius: 2px;
+    border: solid, black;
 }
