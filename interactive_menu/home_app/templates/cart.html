@@ -117,44 +117,11 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
             <div class="container-md">
                 <h1> <a class="navbar-brand" href="#" id="nav">My Chart</a></h1>
-
+                <a href="/home/">Previous page</a>
 
             </div>
         </nav>
 
-
-        <!-- <div class="cart">
-
-            <h4> Ordered Items: <span class="price" style="color:black"><i class="fa fa-shopping-cart" ></i> </span></h4>
-            <ul>
-                <li>
-                    <p> Product 1: <span class="price">50 ₪</span> | <span class="amount">1</span></p>
-                </li>
-
-                <li>
-                    <p> Product 2:<span class="price"> 50 ₪</span> | <span class="amount">1</span></p>
-                </li>
-                </p>
-                <li>
-                    <p> Product 3:<span class="price"> 50 ₪</span> | <span class="amount">1</span></p>
-                </li>
-
-                </p>
-                <li>
-                    <p> Product 4:<span class="price"> 50 ₪</span> | <span class="amount">1</span></p>
-                </li>
-
-                </p>
-                <hr>
-                <p>Total: <span class="price" style="color:black"><b>200 ₪ </b></span></p>
-                <hr>
-            </ul>
-        </div>
-        <div class="edit"> <button type="button" class="btn btn-danger">Submit</button>
-            <button type="button" class="btn btn-dark">Edit</button>
-
-
-            <button type="button" class="btn btn-dark">Delete</button> </div> -->
 
 
 
@@ -164,22 +131,21 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Item</th>
-                        <th scope="col">Amount</th>
                         <th scope="col">Price</th>
-                        <th scope="col">Total</th>
+                        <th scope="col">Amount</th>
+                        
                         <th scope="col">Actions</th>
 
                     </tr>
                 </thead>
                 <tbody>
-                    {%for i in chart%}
+                    {%for i in item%}
                     <tr>
-                        <th scope="row">1</th>
-                        <td>{i.item}</td>
-                        <td>{i.amount}</td>
-                        <td>{i.price}</td>
-                        <td>{i.total}</td>
-                        <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+                        <th scope="row">{{i.id}}</th>
+                        <td>{{i.name}}</td>
+                        <td>{{i.price}}</td>
+                        <td>{{i.quantity}}</td>
+                        <td><a href="/delete/{{i.id}}/">Delete</a></td>
 
                     </tr>
                     {% endfor %}
@@ -189,11 +155,12 @@
             <button class="open-button" id="btn" onclick="openForm()">Any Feedback ?</button>
 
             <div class="chat-popup" id="myForm">
-                <form action="/action_page.php" class="form-container">
-                    <h4>Write your feedback here :</h4>
+                <form action="/sendfeedback/" method="POST" class="form-container">
+                    {%csrf_token%}
+                    <h4>Write your feedback here:</h4>
 
                     <label for="msg"><b>Message</b></label>
-                    <textarea placeholder="Type message.." name="msg" required></textarea>
+                    <textarea placeholder="Type Feedback.." name="description" required></textarea>
 
                     <button type="submit" class="btn">Send</button>
                     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
